@@ -1,0 +1,11 @@
+vagrant up rocky
+vagrant ssh rocky
+sudo dnf install -y python3-pip
+python3 -m venv ~/.venv/ansible
+source ~/.venv/ansible/bin/activate
+pip install --upgrade pip
+pip install ansible
+ansible --version
+deactivate
+exit
+vagrant destroy -f rocky

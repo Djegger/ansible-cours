@@ -1,0 +1,8 @@
+vagrant up ubuntu
+vagrant ssh ubuntu
+sudo apt update
+sudo apt-add-repository ppa:ansible/ansible
+sudo apt update
+sudo apt install -y ansible
+exit
+vagrant destroy -f ubuntu
